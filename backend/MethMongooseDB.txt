@@ -1,0 +1,8 @@
+Methods of the library mongoose
+
+find({ id: req.params.id })
+findOne({password})
+create({ name: req.body.name, email: req.body.email })
+findById(req.params.id)
+findByIdAndUpdate(req.params.id, req.body, { new: true })
+deleteOne()
