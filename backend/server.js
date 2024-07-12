@@ -6,10 +6,19 @@ import errorHandler from './middleware/errorMiddleware.js';
 import loggerHandler from './middleware/loggerMiddleware.js';
 import notFoundHandler from './middleware/notFoundMiddleware.js';
 import userRoute from './routes/userRoute.js';
+import cors from 'cors';
 
 const PORT = process.env.PORT_BACKEND || 8080;
 
 const app = express();
+
+// Cors polity
+const corsOptions = {
+  origin: 'http://localhost:4173',
+  credentials: true,
+  optionSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 
 // Database
 connectDB();

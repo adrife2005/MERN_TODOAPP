@@ -1,0 +1,35 @@
+.goal {
+  margin-top: 10px;
+}
+
+.goal__container {
+  max-width: 936px;
+  margin-inline: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.goal__container .goal__list {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+  gap: 20px;
+}
+
+.goal__item {
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  padding: 20px;
+  font-size: var(--text-sm);
+  text-align: center;
+  position: relative;
+}
+
+.goal__item__close {
+  position: absolute;
+  top: -3px;
+  right: 6px;
+  font-size: var(--text-2xl);
+  color: var(--primary-color);
+  font-weight: bolder;
+}
