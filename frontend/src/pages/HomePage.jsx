@@ -24,7 +24,7 @@ const HomePage = () => {
   }
 
 
-  const API_GOALS = 'https://backend-todoapp-kmdm.onrender.com/api/goals';
+  const API_GOALS = 'https://backend-todoapp-kmdm.onrender.com/api/goals/';
 
   // Post a goal
   const newGoal = async (goalData) => {
