@@ -10,7 +10,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate()
 
-  const API_URI = 'https://localhost:5000/api/users/login';
+  const API_URI = 'https://backend-todoapp-kmdm.onrender.com/api/users/login';
 
   const fetchUsers = async (login) => {
     try {
