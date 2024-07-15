@@ -24,6 +24,7 @@ const corsOptions = {
   credentials: true,
   optionSuccessStatus: 200,
 };
+
 app.use(cors(corsOptions));
 
 // Database
@@ -40,18 +41,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/goals', goalsRoute);
 app.use('/api/users', userRoute);
 
-// Static folder frontend
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../frontend/dist')));
-
-  app.get('*', (req, res) =>
-    res.sendFile(
-      path.resolve(__dirname, '../', 'frontend', 'dist', 'index.html')
-    )
-  );
-} else {
-  app.get('/', (req, res) => res.send('Please set to production'));
-}
+// The index page
+app.get('/', (req, res) => {
+  res.send('This is the backend for my to_do_app');
+});
 
 // Error Middleware
 app.use(notFoundHandler);
