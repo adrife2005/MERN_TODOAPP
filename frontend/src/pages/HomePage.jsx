@@ -63,13 +63,10 @@ const HomePage = () => {
       }
     }
 
-    return () => {
-      goals()
-    }
-  }, [text, navigate, API_GOALS])
+    goals()
+  }, [navigate, text, goals])
 
   // DeleteGoal
-
   const deleteGoal = async (id) => {
     try {
       const userToken = JSON.parse(localStorage.getItem('user'))
